@@ -1,11 +1,11 @@
 import prompts from 'prompts';
 import state from './state';
 
-async function robot(){
+async function robot() {
 
     const content = await askAndReturnDate();
 
-    function askAndReturnDate(){
+    function askAndReturnDate() {
         const question = [{
             type: 'text',
             name: 'dateTerm',
@@ -13,7 +13,7 @@ async function robot(){
             validate: value => typeof value === 'string' ? value.trim !== '' : false,
         }];
 
-        return new Promise( async (resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             const promptOptions = {
                 onCancel: () => reject(new Error('The user has stopped answer')),
             }

@@ -97,9 +97,9 @@ async function robot() {
             motorista: 'Gol'
         }];
 
-        for(let i = 0; i < content.length; i++){
-            for(let j = 0; j < motoristas.length; j++){
-                if(content[i].placa === motoristas[j].placa){
+        for (let i = 0; i < content.length; i++) {
+            for (let j = 0; j < motoristas.length; j++) {
+                if (content[i].placa === motoristas[j].placa) {
                     content[i].motorista = motoristas[j].motorista;
                 }
             }
